@@ -1,0 +1,23 @@
+version: "3.9"
+
+x-app-service-template: &app
+  build: .
+  volumes:
+    - .:/app/
+  networks:
+   - network
+  ports:
+    - 3014:3014
+
+services:
+  ruby-ui-test:
+    container_name: ruby-ui-test
+    command: bash -c "cucumber"
+    <<: *app
+
+networks:
+  network:
+    driver: bridge
+
+volumes:
+  node_modules:
