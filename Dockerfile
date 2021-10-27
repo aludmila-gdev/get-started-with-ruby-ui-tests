@@ -5,7 +5,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 RUN apt-get update -y && \
   apt-get install -y unzip xvfb \
-  qt5-default libqt5webkit5-dev \
+  qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5webkit5-dev \
   gstreamer1.0-plugins-base \
   gstreamer1.0-tools gstreamer1.0-x \
   freetds-dev \
@@ -26,10 +26,10 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 
 # Update the package list and install chrome
 RUN apt-get update -y
-RUN apt-get install -y google-chrome-stable=92.0.4515.131-1
+RUN apt-get install -y google-chrome-stable=95.0.4638.54-1
 
 # Set up Chromedriver Environment variables
-ENV CHROMEDRIVER_VERSION 92.0.4515.107
+ENV CHROMEDRIVER_VERSION 95.0.4638.17
 ENV CHROMEDRIVER_DIR /usr/bin/chromedriver
 RUN mkdir $CHROMEDRIVER_DIR
 
