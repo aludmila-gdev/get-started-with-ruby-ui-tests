@@ -22,18 +22,24 @@ To get started, you need to:
 2. Have the docker installed on your machine, [go to this link](https://docs.docker.com/get-docker/)
 3. Go to the terminal, and execute the following command:
 
-`docker pull aludmila/ruby-ui-test:latest`
+```shell
+docker pull aludmila/ruby-ui-test:latest
+```
 
 4. Still in the terminal, execute the following command:
 
-`docker compose up ruby-ui-test`
+```shell
+docker compose up ruby-ui-test
+```
+
 
 🥳 Then your environment will be ready to go!
 
 5. Every time you want to run your tests, run the command:
 
-`docker compose up ruby-ui-test`
-
+```shell
+docker compose up ruby-ui-test
+```
 
 # Inserting new automated tests
 

@@ -11,6 +11,7 @@ x-app-service-template: &app
 
 services:
   ruby-ui-test:
+    image: aludmila/ruby-ui-test:latest
     container_name: ruby-ui-test
     command: bash -c "cucumber"
     <<: *app
